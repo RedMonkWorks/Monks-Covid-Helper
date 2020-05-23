@@ -5,9 +5,86 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="icon" href="favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script LANGUAGE="JavaScript">
+            function test_it(entry) {
+            if (entry.value!=null && entry.value.length!=0) {
+                    entry.value=""+ eval(entry.value);
+               }
+                    computeForm(entry.form);
+                    return false;
+            }
+            
+            function computeForm(form) {
+            var total=0
+            
+            for (var count=0; count<4; count++)
+            {
+                    if (form.a[count].checked){
+                    var total=total+parseInt(form.a[count].value);
+                }
+            }
+            
+            for (var count=0; count<4; count++)
+            {
+                    if (form.b[count].checked){
+                    var total=total+parseInt(form.b[count].value);
+                }
+            }
+
+            for (var count=0; count<4; count++)
+            {
+                    if (form.c[count].checked){
+                    var total=total+parseInt(form.c[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.d[count].checked){
+                    var total=total+parseInt(form.d[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.e[count].checked){
+                    var total=total+parseInt(form.e[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.f[count].checked){
+                   var total=total+parseInt(form.f[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.g[count].checked){
+                    var total=total+parseInt(form.g[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.h[count].checked){
+                    var total=total+parseInt(form.h[count].value);
+                }
+            }
+            for (var count=0; count<4; count++)
+            {
+                    if (form.i[count].checked){
+                    var total=total+parseInt(form.i[count].value);
+                }
+            }
+
+            if (total<9){ alert("YOU ARE SAFE. Keep following the safety guidelines");
+                          return false; }
+            else if (total>9 && total<20){alert("There is a chance of infection, please head over to WHO data to check wether there is a positive case in your area, if so please get tested.");  
+                                          return false; }
+            else { alert("You are probably infected with Covid Disease. Don't panic, please call On: +91-11-23978046. The Government is taking care of Positive patients and helping to curb this disease.");
+                   return false; }
+            }
+         </SCRIPT>
     </head>
     <body>
 
@@ -18,7 +95,6 @@
 
                     <ul class= "main_nav animated slideInDown"  id="check-class">
                         <li><a href= "#Home">HOME</a></li>
-                        <li><a href= "#Test">TEST</a></li>
                         <li><a href= "#Contact">CONTACT</a></li>
                         <li><a href= "#About">ABOUT</a></li>
                     </ul>
@@ -34,7 +110,7 @@
                 COVID HELPER
             </h1>
             <a href="#Test" class="btn btn-full">Start Now</a>
-            <a href="#Services" class="btn btn-nav">Info</a>
+            <a href="#About" class="btn btn-nav">Info</a>
             </div>
         </header>
         
@@ -43,7 +119,7 @@
                     <h2>
                         ABOUT US
                     </h2>
-                    <h3 style="background-color: darkgray;">
+                    <h3>
                         Monks Covid Helper is your one stop website for knowing if you need immediate checkup for Covid by Answering these few questions.
                     </h3>
                 </div>
@@ -54,59 +130,59 @@
                 <h2>
                         TAKE THE TEST
                 </h2>
-                <h3 style="background-color: darkgray;">
+                <h3>
                     To Check if you are effected with Corona or not,
                     Some Question are mentioned below, just click the level of Problem.
                 </h3>
                 <div>
                     <form  id="ravi" METHOD=POST>
                         <b>A->fever level<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="a" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="a" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="a" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="a" VALUE="3"> High or Maximum<br><br>
                         <b>B->Dry Cough Level<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="b" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="b" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="b" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="b" VALUE="3"> High or Maximum<br><br>
                         <b>C->Tiredness<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="c" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="c" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="c" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="c" VALUE="3"> High or Maximum<br><br>
                         <b>D->Chest Pain or Pressure<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="d" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="d" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="d" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="d" VALUE="3"> High or Maximum<br><br>
                         <b>E->Breathing Problem<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="e" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="e" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="e" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="e" VALUE="3"> High or Maximum<br><br>
                         <b>F->Pain in the body<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="f" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="f" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="f" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="f" VALUE="3"> High or Maximum<br><br>
                         <b>H->Loss of Taste and Smell<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="g" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="g" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="g" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="g" VALUE="3"> High or Maximum<br><br>
                         <b>I->Rash on Skin,or decoloration of finger or toes<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <input TYPE="radio" NAME="h" VALUE="0"> No<br>
+                        <input TYPE="radio" NAME="h" VALUE="1"> Average or Normal<br>
+                        <input TYPE="radio" NAME="h" VALUE="2"> Above Average<br>
+                        <input TYPE="radio" NAME="h" VALUE="3"> High or Maximum<br><br>
                         <b>J->You are Facing these problem since<br></b>
-                        <input TYPE="radio" NAME="0" VALUE="1">0(1-2 days)<br>
-                        <input TYPE="radio" NAME="1" VALUE="1">1(2-5 days)<br>
-                        <input TYPE="radio" NAME="2" VALUE="1">2(5-8 days)<br>
-                        <input TYPE="radio" NAME="3" VALUE="1">3(above 8 days)<br><br>
+                        <input TYPE="radio" NAME="i" VALUE="0"> 1-2 days<br>
+                        <input TYPE="radio" NAME="i" VALUE="1"> 2-5 days<br>
+                        <input TYPE="radio" NAME="i" VALUE="2"> 5-8 days<br>
+                        <input TYPE="radio" NAME="i" VALUE="3"> Above 8 days<br><br>
 
-                        <button onClick="computeForm(this.form)">Compute Score</button><br><br>
+                        <button class="btn btn-full" onClick="computeForm(this.form); return false;">Check Result</button><br><br>
                     
                         </form>
                 </div>
@@ -120,8 +196,7 @@
                     <h2>QUICK LINKS</h2>
                     <div class="flex-container">
                     <div class="row">
-
-                     <div class="column">
+                        <div class="column">
                         <div class="flex">
                             <p>Help - Watson Assistant</p>
                             <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=8eee6d25-a6a2-4b45-b008-b3f94a84aa83&serviceInstanceID=bd0b3ec5-9717-4d9a-919f-f900cf5fa482" target="_blank">
@@ -129,7 +204,7 @@
                             </a>
                         </div>
                         </div>
-
+                        
                         <div class="column">
                         <div class="flex">
                             <p>Live Covid Status - WHO</p>
