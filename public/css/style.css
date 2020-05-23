@@ -8,9 +8,9 @@
 body{
     font-size: 20px;
     overflow-x: hidden;
-    color: aliceblue;
-    font-family: 'Flamenco', cursive;
-    background-color: grey;
+    color: #03DAC5;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #121212;
 }
 
 header
@@ -66,7 +66,7 @@ section
 
 .main_nav li a
 {
-    color: aliceblue;
+    color: #03DAC5;
     text-decoration: none;
     font-size: 90%;
     font-weight: 100;
@@ -75,7 +75,7 @@ section
 
 .main_nav li a:hover
 {
-    border-bottom: 2px solid #bf55ec;
+    border-bottom: 2px solid #03DAC5;
 }
 
 .main-content-header
@@ -99,7 +99,7 @@ h1
 
 h2
 {
-    color: black;
+    color: aliceblue;
     font-size: 240%;
     word-spacing: 5px;
     letter-spacing: 3px;
@@ -109,7 +109,7 @@ h2
 
 h3
 {
-    color: black;
+    color: aliceblue;
     font-size: 100%;
     word-spacing: 5px;
     letter-spacing: 3px;
@@ -131,27 +131,27 @@ h3
 .btn-full
 {
     background-color: transparent;
-    color: #bf55ec;
+    color: #03DAC5;
     margin-right: 15px;
-    border: 1px solid #bf55ec;
+    border: 1px solid #03DAC5;
 }
 
 .btn-full:hover
 {
-    background-color: #fff;
+    background-color: #BB86FC;
 }
 
 .btn-nav
 {
     background-color: transparent;
-    color: #fff;
+    color: #03DAC5;
     margin-right: 15px;
-    border: 1px solid #fff;
+    border: 1px solid #BB86FC;
 }
 
 .btn-nav:hover
 {
-    background-color: #bf55ec;
+    background-color: #BB86FC;
 }
 
 .about
@@ -174,7 +174,7 @@ h3
 
 .test
 {
-    color: black;
+    color: #fff;
     text-decoration: none;
     font-size: 200%;
     font-weight: 100;
@@ -187,24 +187,14 @@ h3
     padding-left: 10%;
 }
 
-#ravi{background-color: #fff;
+#ravi{background-color: #404040;
       text-align: left;
     padding-left: 10%;}
 
-.services
-{
-    color: black;
-    background-color: aliceblue;
-    text-decoration: none;
-    font-size: 200%;
-    font-weight: 100;
-    text-align: center;
-    margin: 30px;
-}
 
 .contact
 {
-    color: black;
+    color: #fff;
     text-decoration: none;
     font-size: 200%;
     font-weight: 100;
@@ -219,7 +209,7 @@ h3
 
 footer
 {
-    background-color: #bf55ec;
+    background-color: #BB86FC;
     margin-top: -100px;
     position: relative;
     clear: both;
@@ -229,9 +219,9 @@ footer
 @keyframes colorchange1
 {
     0%{color: red;}
-    25%{color: #bf55ec;}
+    25%{color: #BB86FC;}
     50%{color: white;}
-    100%{color: #bf55ec;}
+    100%{color: #BB86FC;}
 }
 
 .mobile-icon{ display: none;}
@@ -250,19 +240,25 @@ footer
 @media only screen and (max-width: 998px)
 {
     h1{ font-size: 200%; }
+    h2{font-size: 190%; }
+    h3{font-size: 80%; }   
+    test{font-size: 170%; }
+    
 }
 
 @media only screen and (max-width: 768px)
 {
-    h1
-    { font-size: 180%; }
+    h1{ font-size: 180%; }
+    h2{font-size: 180%; }
+    h3{font-size: 60%; }
+    test{font-size: 150%; }
 
     .main_nav{ display: none;}
 
     .main_nav li{
         display: block;
         margin-top: 10px;
-        margin-right: 10px;
+        margin-right: 5px;
     } 
 
     .mobile-icon{
@@ -280,6 +276,9 @@ footer
     }
 
     h1{font-size: 160%;}
+    h2{font-size: 160%; }
+    h3{font-size: 55%; }
+    test{font-size: 120%; }
 }
 
 .img__wrap {
@@ -314,8 +313,8 @@ footer
   .column {
     float: left;
     width: 40%;
-    padding: 3%;
-    margin: 3%;
+    padding: 2%;
+    margin: 2%;
   }
   
   /* Clear floats after the columns */
