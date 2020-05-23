@@ -1,24 +1,174 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <title>Monks Covid Helper</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
 
-  <head>
-    <title>Hello World</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+        <header id="Home">
+            <nav>
+                <div class= "row clearfix">
+                    <img src= "images/logo.png" class= "logo animated slideInDown" alt="">
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1>Hello world!</h1>
-        </td>
-      </tr>
-    </table>
-  </body>
+                    <ul class= "main_nav animated slideInDown"  id="check-class">
+                        <li><a href= "#Home">HOME</a></li>
+                        <li><a href= "#Test">TEST</a></li>
+                        <li><a href= "#Contact">CONTACT</a></li>
+                        <li><a href= "#About">ABOUT</a></li>
+                    </ul>
+                    <a href="#" class="mobile-icon" onclick="slideshow()">
+                        <i class= "fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
 
+            <div class="main-content-header">
+            <h1>
+                WELCOME TO <span class="colorchange">MONKS</span><br>
+                COVID HELPER
+            </h1>
+            <a href="#Test" class="btn btn-full">Start Now</a>
+            <a href="#Services" class="btn btn-nav">Info</a>
+            </div>
+        </header>
+        
+        <section class="about" id="About">
+                <div>
+                    <h2>
+                        ABOUT US
+                    </h2>
+                    <h3 style="background-color: darkgray;">
+                        Monks Covid Helper is your one stop website for knowing if you need immediate checkup for Covid by Answering these few questions.
+                    </h3>
+                </div>
+        </section>
+
+        <section class="test" id="Test">
+            <div>
+                <h2>
+                        TAKE THE TEST
+                </h2>
+                <h3 style="background-color: darkgray;">
+                    To Check if you are effected with Corona or not,
+                    Some Question are mentioned below, just click the level of Problem.
+                </h3>
+                <div>
+                    <form  id="ravi" METHOD=POST>
+                        <b>A->fever level<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>B->Dry Cough Level<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>C->Tiredness<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>D->Chest Pain or Pressure<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>E->Breathing Problem<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>F->Pain in the body<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>H->Loss of Taste and Smell<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>I->Rash on Skin,or decoloration of finger or toes<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0. No<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1. Average or Normal<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2. Above Average<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3. High or Maximum<br><br>
+                        <b>J->You are Facing these problem since<br></b>
+                        <input TYPE="radio" NAME="0" VALUE="1">0(1-2 days)<br>
+                        <input TYPE="radio" NAME="1" VALUE="1">1(2-5 days)<br>
+                        <input TYPE="radio" NAME="2" VALUE="1">2(5-8 days)<br>
+                        <input TYPE="radio" NAME="3" VALUE="1">3(above 8 days)<br><br>
+
+                        <button onClick="computeForm(this.form)">Compute Score</button><br><br>
+                    
+                        </form>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contact" id="Contact">
+                    
+                </div>
+                    <h2>QUICK LINKS</h2>
+                    <div class="flex-container">
+                    <div class="row">
+
+                     <div class="column">
+                        <div class="flex">
+                            <p>Help - Watson Assistant</p>
+                            <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=8eee6d25-a6a2-4b45-b008-b3f94a84aa83&serviceInstanceID=bd0b3ec5-9717-4d9a-919f-f900cf5fa482" target="_blank">
+                                <img src="images/Watson.png" height="100px">
+                            </a>
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="flex">
+                            <p>Live Covid Status - WHO</p>
+                            <a href="https://covid19.who.int/" target="_blank">
+                                <img src="images/who.png" height="80px">
+                            </a>
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="flex">
+                            <p>MoHFW Website</p>
+                            <a href="https://www.mohfw.gov.in/" target="_blank">
+                                <img src="images/emblem.png" height="80px">
+                            </a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <footer>
+            <div>
+                <h2>Made by the Team - MONKS</h2>
+            </div>
+        </footer>
+
+        <script>
+            function slideshow() {
+                var x= document.getElementById('check-class');
+                if(x.style.display === "none")
+                {
+                    x.style.display="block";
+                }
+                else{
+                    x.style.display="none";
+                }
+            }
+        </script>
+    </body>
 </html>
